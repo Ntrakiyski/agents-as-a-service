@@ -6,15 +6,11 @@
 
 **A platform for specialized AI capabilities that can use your tools, follow approved workflows, work inside isolated environments, and deliver results you can verify.**
 
-**API-first · MCP-native · UI-optional · Sandbox-first**
-
-[**The Vision**](PRODUCT.md) &nbsp;·&nbsp; [**Architecture**](ARCHITECTURE.md) &nbsp;·&nbsp; [**Roadmap**](ROADMAP.md)
+**Less prompting. More completed work.**
 
 </div>
 
 ---
-
-> **Project status:** Early development. This repository currently contains the product blueprint, engineering instructions, integration plans, and service scaffolding—not a publicly available or production-ready platform. The experience below describes what we're building.
 
 ## AI should do more than answer questions
 
@@ -36,136 +32,108 @@ Not a tutorial. Not a collection of prompts. **A finished, reviewable result.**
 
 That's the idea behind **Agents as a Service (AaaS)**.
 
-## One platform. Many capabilities. Any interface.
+## One place to get real work done
 
-Every capability is a focused, versioned way to accomplish a real task. It has defined inputs, outputs, tools, execution rules, and quality checks.
+Think of it as a growing library of AI-powered services, each designed to handle a specific kind of work.
 
-A person should be able to run it from whichever interface they already use:
+Need to clean up a report? Choose that service. Need to turn several spreadsheets into one clear summary? Choose another. Need to prepare a client presentation from existing material? There should be a service for that, too.
 
-| Interface | Experience |
+You describe the outcome, provide the information it needs, and receive work you can actually use.
+
+**No learning complicated software. No starting from scratch. No endless back-and-forth just to get a usable file.**
+
+## Your tools. Your information. Your way of working.
+
+Businesses already have documents, templates, accounts, and processes that matter to them. AI should adapt to those—not force people to abandon them.
+
+Agents as a Service is designed to work with the services your team already uses, understand the context of the task, and respect the way your business operates.
+
+Your company template stays your company template. Your existing information becomes useful in new ways. A task can involve one document or several different sources without you having to piece everything together manually.
+
+And connecting an account doesn't mean giving an AI agent unlimited freedom.
+
+**You stay in control of what it can access and what it is allowed to do.**
+
+## See the plan. Approve the work. Keep control.
+
+AI should not be a black box making decisions on behalf of your business.
+
+Before a task takes actions that matter, you should be able to see what is going to happen and approve it. If the agent encounters something unclear, it should ask rather than guess.
+
+Imagine a colleague who can work independently but knows when to check with you.
+
+- **Know what's happening.** See the steps involved in your request.
+- **Keep important decisions yours.** Approve sensitive actions before they happen.
+- **Answer questions along the way.** Clarify a requirement without restarting everything.
+- **Review the outcome.** See what changed and request another revision when needed.
+
+The goal isn't to remove people from the process. **It's to remove the repetitive work while keeping people in control.**
+
+## From individual tasks to work that takes care of itself
+
+The first experience is simple: **pick a task, explain what you need, and get the result.**
+
+Over time, the same library will become available through one conversational assistant. Instead of browsing for a service, you'll be able to say what you want in everyday language.
+
+> “Every Friday, collect the latest sales numbers, update our report, create a short summary, and prepare it for my approval.”
+
+The assistant would ask any missing questions, show you the proposed process, and—once authorized—carry it out.
+
+And not every request has to start with you:
+
+| When work happens | What it could look like |
 |---|---|
-| **Capability catalog** | Browse a library of tasks, upload files, add instructions, and receive a result. |
-| **REST API** | Launch, track, and integrate capabilities from your own applications. |
-| **Remote MCP** | Give ChatGPT, Claude, Hermes, or another compatible agent access to the same governed capabilities. |
-| **Conversational workspace (planned V2)** | Tell one agent what you want. It discovers capabilities, proposes workflows, and coordinates the work for you. |
+| **Whenever you ask** | Update a proposal before a client meeting. |
+| **On a schedule** | Prepare the weekly performance report every Friday. |
+| **When something changes** | Draft a follow-up when a new client request arrives. |
+| **When an opportunity appears** | Suggest a useful next step and let you decide whether to proceed. |
 
-**The interface is optional. The capabilities are the product.**
+**One request can become a repeatable way of working.**
 
-## Designed around six layers
+## Built for the work businesses actually do
 
-The platform is being designed as six connected layers, each with one clear responsibility.
+### For consultants and agencies
 
-| Layer | What it does |
-|---|---|
-| **01 · Identity & Workspace** | Give people and teams their own authenticated, isolated workspace. |
-| **02 · Connections** | Securely connect the apps, accounts, and services they already use. |
-| **03 · Capabilities** | Make specialized AI tasks discoverable, reusable, and versioned. |
-| **04 · Workflow & Approval** | Show what will happen, in what order, with which permissions—and ask for approval where needed. |
-| **05 · Sandbox Execution** | Run agent workloads inside isolated, resource-limited environments with narrowly scoped access. |
-| **06 · Artifacts & Verification** | Deliver files, revisions, previews, validation evidence, and execution history. |
+Turn client notes into polished proposals. Update branded presentations. Prepare deliverables from multiple sources without constantly rebuilding the same documents.
 
-### Connect your tools. Don't hand the agent the keys.
+### For finance and operations teams
 
-Connecting Google Workspace, Microsoft 365, or a CRM should **not** grant an arbitrary sandbox agent access to every available action.
+Bring together spreadsheets, reconcile information, prepare recurring reports, and make important numbers easier to understand.
 
-Our design follows a stricter principle:
+### For sales and customer-facing teams
 
-> **An agent may perform only the actions authorized for the approved workflow, with the specified accounts, resources, and limits.**
+Prepare follow-ups, summarize account information, update client documents, and keep routine work moving between meetings.
 
-Connections manage provider accounts and credentials. Open Flow defines business steps and approvals. A server-side policy boundary is responsible for enforcing the permitted actions. Sandboxed agents get only the access required to complete their assigned work.
+### For small businesses
 
-The system is also designed for **human-in-the-loop reviews**. An agent can pause, ask a question, request a decision, and resume when the authorized user responds.
+Get the benefits of specialized assistance without hiring a separate person—or buying another complicated application—for every repetitive task.
 
-## From a capability library to an agent-native workspace
+## Use it wherever you already work
 
-### V1 — Pick a task. Get a result.
+Some people will prefer a simple website where they can choose a task and upload a file. Others will want to ask for the same work from their favorite AI assistant. Businesses may want to include these capabilities in the tools they already provide to employees or customers.
 
-The first product experience is a searchable library of capabilities.
+**The experience should meet you where you are—not require everyone to learn a new way of working.**
 
-Choose a task, describe the outcome, provide files or approved connections, and start a run. Follow its progress, respond to review requests, and access the finished artifacts and revisions.
+## The bigger idea
 
-**First planned document capability:** Edit an existing Word template while preserving its layout and validating the output.
+Software-as-a-Service gave businesses access to software.
 
-### V2 — Just describe what you need.
+**Agents-as-a-Service aims to give businesses access to completed work.**
 
-Instead of manually choosing a capability, talk to a general-purpose agent.
+Instead of paying for another interface full of features, imagine choosing the outcome you need and letting a specialized agent handle the process—with clear boundaries, the ability to ask questions, and a result you can inspect.
 
-It can identify the right capabilities, ask for missing information, build a workflow, and present the proposed steps for your approval. The approved workflow then coordinates execution.
-
-The V1 library doesn't disappear. **It becomes the execution backbone of V2.**
-
-### Work that doesn't need a new prompt every time
-
-The architecture also supports four ways to initiate work:
-
-- **Manual Runs** — Start a capability whenever you need it.
-- **Scheduled Runs** — Execute approved workflows on a recurring schedule.
-- **Event-Triggered Runs** — React to permitted events from connected services.
-- **Proactive Suggestions** — Have agents identify useful next steps, without treating a suggestion as permission to act.
-
-## Built as a platform, not one giant application
-
-This is a **single GitHub monorepo** with **independently deployable services**, intended to run as separate Coolify resources. The services communicate through versioned APIs rather than sharing private databases or being bundled into one application-wide Docker Compose.
-
-| Building block | Role |
-|---|---|
-| [**Connections**](https://github.com/Ntrakiyski/connections) | Governed access to external accounts, providers, and actions. |
-| [**Open Flow**](https://github.com/oomol-lab/open-flow) | Workflow definition, orchestration, and approvals. |
-| **Capability API + MCP Server** | The shared, authenticated interface to the capability library. |
-| **Job Runner** | Durable jobs, scheduling, retries, and execution status. |
-| **Sandbox Provider** | Isolated execution environments and workload lifecycle. |
-| **LiteLLM** | Model routing, approved models, budgets, and usage visibility. |
-| **Grafana Loki** | Centralized service and infrastructure logging. |
-| **Artifact storage & validation** | Durable inputs, outputs, versions, and quality evidence. |
-
-**Backend preference:** Go for new services; TypeScript/JavaScript for the frontend. Existing working services can retain their current language.
-
-Sandbox technology is being evaluated rather than assumed: the current BoxLite-based provider is one baseline, and [Microsandbox](https://github.com/superradcompany/microsandbox) is a candidate for self-hosted execution.
-
-## Built *by* agents, maintained *by* agents
-
-The engineering process is agent-native too.
-
-This repository is designed to be the central working context for coding and operations agents, not just a collection of source files. We use:
-
-- [**Beads**](https://github.com/gastownhall/beads) for persistent, dependency-aware engineering tasks.
-- [**Gas Town**](https://github.com/gastownhall/gastown) for coordinating multiple coding agents and isolated worktrees.
-- **Project-level agent skills** in [`.agents/skills/`](.agents/skills/) for repeatable development, integration testing, reviews, deployment, and incident investigation.
-- **Operational knowledge** in [`operations/`](operations/) for MCP/API discovery, service inventories, logs, permissions, and recovery procedures.
-
-Agents are expected to research before building, work from explicit contracts, prove integrations with actual tests, review changes independently, and produce verifiable deployment evidence.
-
-**Automation doesn't eliminate controls. It makes good controls more important.**
-
-## Where we are now
-
-The immediate priority is **proving the connection between Connections and Open Flow** using real, scoped test accounts and a simple workflow. That integration must demonstrate both a successful authorized action and failed unauthorized attempts.
-
-After that, the plan is to qualify a sandbox runtime on the intended hardware, prove durable artifact exchange and human-review recovery, and build the first end-to-end document capability.
-
-See the [current integration proof](engineering/spikes/01-connections-openflow.md), [sandbox evaluation plan](engineering/spikes/02-microsandbox-qualification.md), and [roadmap](ROADMAP.md). These are plans and acceptance gates, not claims that the integrations already work.
-
-## Explore the project
-
-| Document | Why it matters |
-|---|---|
-| [PRODUCT.md](PRODUCT.md) | Product vision, positioning, six layers, V1 and V2. |
-| [ARCHITECTURE.md](ARCHITECTURE.md) | Service ownership, contracts, security boundaries, and execution flow. |
-| [DECISIONS.md](DECISIONS.md) | The 20 architecture decisions that guide implementation. |
-| [ROADMAP.md](ROADMAP.md) | Evidence-gated milestones and integration priorities. |
-| [AGENTS.md](AGENTS.md) | Entry point and operating rules for coding and operations agents. |
-| [services/](services/) | Service-level boundaries and instructions. |
-| [engineering/](engineering/) | Research, ADRs, contracts, evaluations, and integration spikes. |
-| [operations/](operations/) | Operational inventories, MCP references, policies, and runbooks. |
+One task at a time, this could change what using business software feels like.
 
 ---
 
 <div align="center">
 
-### Less prompting. More completed work.
+### Less busywork. More progress.
 
-**Specialized agents. Approved workflows. Controlled execution. Verifiable outcomes.**
+**AI that works with your business, not just talks about it.**
 
-*Agents as a Service — an agent-native platform in development.*
+*Agents as a Service is in early development. The capabilities and experiences described above are the product vision, not a currently available public service.*
+
+**Follow this repository to see the product take shape.**
 
 </div>

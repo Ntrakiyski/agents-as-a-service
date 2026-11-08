@@ -1,0 +1,24 @@
+schema_version: 1
+status: documentation_only_not_registered
+servers:
+  - name: github
+    purpose: code_review_and_pull_requests
+    requested_scope: read_and_scoped_write
+    registration: "Configure in installed agent host, not here."
+  - name: coolify
+    purpose: deployment_and_health
+    requested_scope: readonly_by_default
+  - name: grafana_loki
+    purpose: correlated_log_queries
+    requested_scope: readonly
+  - name: litellm
+    purpose: model_budget_and_usage
+    requested_scope: readonly_by_default
+  - name: connections
+    purpose: permitted_connection_catalog_and_actions
+    requested_scope: workspace_bounded
+  - name: open_flow
+    purpose: workflow_draft_and_run
+    requested_scope: workspace_bounded
+# Never include tokens. Verify the actual MCP endpoint, authentication mechanism, tools and versions per runtime.
+

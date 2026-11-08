@@ -1,0 +1,31 @@
+schema_version: 1
+status: example_not_live_inventory
+coolify_project: workflow-agents
+services:
+  - name: connections
+    repo_path: services/connections
+    source_repository: Ntrakiyski/connections
+    state: external_existing_source_not_imported
+    auth_migration: better-auth-in-progress
+  - name: open-flow
+    repo_path: services/open-flow
+    source_repository: oomol-lab/open-flow
+    state: external_upstream_not_imported
+  - name: job-runner
+    repo_path: services/job-runner
+    source_repository: Ntrakiyski/workflow-agents
+    state: external_existing_source_not_imported
+  - name: sandbox-provider
+    repo_path: services/sandbox-provider
+    state: existing-provider-migration-to-be-assessed
+  - name: capability-api
+    repo_path: services/capability-api
+    state: planned
+  - name: mcp-server
+    repo_path: services/mcp-server
+    state: planned
+  - name: frontend
+    repo_path: services/frontend
+    state: planned
+# Populate actual resource IDs, health URLs, deploy SHAs only after read-only verification.
+

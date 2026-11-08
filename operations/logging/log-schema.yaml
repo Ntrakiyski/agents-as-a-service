@@ -1,0 +1,28 @@
+schema_version: 1
+transport: "structured JSON -> Grafana Alloy -> Loki"
+required_fields:
+  - timestamp
+  - severity
+  - service
+  - environment
+  - correlation_id
+  - action
+  - outcome
+optional_fields:
+  - request_id
+  - run_id
+  - workflow_revision_id
+  - sandbox_id
+  - job_id
+  - duration_ms
+privacy:
+  forbid:
+    - secrets
+    - authorization_headers
+    - document_contents
+    - raw_prompt_contents
+    - provider_tokens
+  audit_storage: "separate durable workspace-scoped audit tables"
+loki_labels: ["service", "environment", "severity"]
+note: "Do not label by unbounded request/user/run IDs; keep those in structured log body."
+

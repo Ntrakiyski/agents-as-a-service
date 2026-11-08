@@ -1,0 +1,14 @@
+# Service instructions — capability-api
+
+**State:** Placeholder; source code has not been imported into this new monorepo.
+
+Planned Go service. Define REST API, workspace auth, manifests, run status, human review and artifact references. Never store connector credentials. Negative tests for cross-workspace requests.
+
+## When working here
+1. Read root AGENTS.md and capability-api/README.md, assigned Bead and relevant integration contract.
+2. Verify exact upstream version, license and deployed source before importing or modifying existing implementation.
+3. Keep builds, tests, migrations, health checks, OCI image, environment and Coolify deployment independent.
+4. Record cross-service API contract changes before implementation; require compatible clients and security-negative cases.
+5. Provide test commands, CI evidence, configuration examples, deployment and rollback instructions when code exists.
+6. Do not copy secrets, claim live readiness from docs or create nested AGENTS.md files.
+

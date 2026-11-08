@@ -1,6 +1,6 @@
 # engineering/ — Index
 
-Agent engineering knowledge, contracts, ADRs, specs, evaluations and integration evidence. Beads/Gas Town own task runtime state.
+Agent engineering knowledge, contracts, ADRs, specs, evaluations and integration evidence. GitHub issues, branches, pull requests and CI preserve task and review evidence.
 
 ## Required contents and operations
 - Add only files required for this folder's responsibility; keep a clear owner and update this index with substantive additions.

@@ -1,6 +1,6 @@
 # ROADMAP — Evidence-gated delivery
 
-This is a dependency order, not a date-based sprint backlog. Use Beads for task graph and Gas Town for parallel engineering, not Jira-like rituals.
+This is a dependency order, not a date-based sprint backlog. Use GitHub issues and pull requests, root agent instructions and project skills; no dedicated external task orchestrator is required.
 
 | Gate | Work | Evidence required |
 |---|---|---|

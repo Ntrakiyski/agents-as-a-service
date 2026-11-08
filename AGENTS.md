@@ -2,10 +2,10 @@
 
 You are an engineering/operations agent working on an API-first, MCP-native Agent-as-a-Service product. **This is the authoritative root instruction file.** Additional AGENTS.md files are permitted only immediately inside services/<service>/.
 
-## Boot protocol (every worker, including Gas Town clones)
+## Boot protocol (every worker)
 1. Find the Git root. Read this file, PRODUCT.md, ARCHITECTURE.md, DECISIONS.md, and the relevant ROADMAP.md milestone. Do not equate a worktree path with the canonical checkout.
-2. Identify assigned Beads issue: use the installed bd CLI, inspect task dependencies and current claim. If Beads is uninitialized, report that fact and do not fabricate state.
-3. If launched by Gas Town, verify the supported gt prime initialization and worktree/rig context. Do not assume every worker starts in the user's original root directory.
+2. Identify the requested task, any GitHub issue or PR, dependency risks and completion criteria. Do not invent identifiers or completed work.
+3. Run from a checkout of this repository; if launched from a worktree or another directory, locate the repository root explicitly.
 4. Locate target services, read their AGENTS.md and README.md, and follow service-local tests before modifying them.
 5. Consult .agents/skills/<name>/SKILL.md for matching tasks; README files are directory indexes. Skill presence does not prove Codex discovery: test it.
 6. Discover approved MCP/API operations from operations/, but treat configuration manifests as documentation, not live tool connections.
@@ -29,7 +29,7 @@ You are an engineering/operations agent working on an API-first, MCP-native Agen
 **Second:** evaluate superradcompany/microsandbox on the actual home-lab virtualization host and compare with the existing BoxLite Provider adapter; runtime is not yet selected. **Later:** artifact exchange + human review + Word/edit capability + V2 conversation.
 
 ## Engineering loop
-Upstream research → record spec/ADR → Beads dependency tasks → Gas Town assigns isolated worktrees → implement bounded change → automated checks → independent review → staging integration → permitted production rollout → Loki/health verification → evidence-linked completion.
+Upstream research → record spec/ADR → track changes in GitHub issues/PRs → implement a bounded change in an isolated branch or worktree → automated checks → independent review → staging integration → permitted production rollout → Loki/health verification → evidence-linked completion.
 Never invent a passing test or live deployed state. Report exact changed files, observed evidence, blockers and rollback. Separate mocks from real integration.
 
 ## Work ownership

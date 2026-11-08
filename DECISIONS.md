@@ -19,11 +19,11 @@
 | D15 | Loki/Alloy structured logs + separate durable audit trail |
 | D16 | Spec/ADR and reproducible acceptance criteria for risky changes |
 | D17 | Project skills at .agents/skills/ and verified discovery |
-| D18 | Beads + Gas Town for dependency-aware agent engineering |
+| D18 | GitHub issues, pull requests, CI and scoped project skills for agent-native engineering; no external task orchestrator required |
 | D19 | Contract/security/e2e checks and staging gates before promotion |
 | D20 | Agent-operated read-only diagnosis; gated production mutations |
 
-**Unproven is not accepted:** Open Flow/Connections compatibility, finished Better Auth identity migration, approved external side effects, sandbox isolation, artifact recovery, cross-workspace negative tests, Codex/Gas Town bootstrapping and independent deployments.
+**Unproven is not accepted:** Open Flow/Connections compatibility, finished Better Auth identity migration, approved external side effects, sandbox isolation, artifact recovery, cross-workspace negative tests, Codex project skill discovery and independent deployments.
 
 Deviations: write a new entry under engineering/adr/ with alternatives, migration and verification; do not quietly rewrite the decision.
 

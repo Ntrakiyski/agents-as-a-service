@@ -14,6 +14,4 @@ coverage/
 .venv/
 __pycache__/
 .DS_Store
-# Gas Town runtime is managed by its CLI outside this repository.
-# Beads repository files are created only by bd init and tracked according to installed tool guidance.
 

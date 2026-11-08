@@ -5,7 +5,7 @@
 Existing Python/BoxLite provider; non-stable artifact transfer/recovery. Compare real host Microsandbox before adding adapter; require quotas, pinned images, egress denial, durable output and cleanup. Do not assume KVM works inside Coolify container.
 
 ## When working here
-1. Read root AGENTS.md and sandbox-provider/README.md, assigned Bead and relevant integration contract.
+1. Read root AGENTS.md and sandbox-provider/README.md, assigned task or GitHub issue and relevant integration contract.
 2. Verify exact upstream version, license and deployed source before importing or modifying existing implementation.
 3. Keep builds, tests, migrations, health checks, OCI image, environment and Coolify deployment independent.
 4. Record cross-service API contract changes before implementation; require compatible clients and security-negative cases.

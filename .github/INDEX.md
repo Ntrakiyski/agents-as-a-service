@@ -7,4 +7,3 @@ GitHub workflows, branch protections and PR templates. CI should only build serv
 - Prefer pinned versions, explicit schemas and verifiable commands. Record whether a component is implemented, planned, deployed or blocked.
 - Read root AGENTS.md and, if this is a service, this service's AGENTS.md before changes.
 - No real credentials, tenant documents or hidden operational access details in Git.
-
